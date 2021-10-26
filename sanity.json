@@ -1,0 +1,38 @@
+{
+  "root": true,
+  "project": {
+    "name": "lit"
+  },
+  "api": {
+    "projectId": "gtg3l5v9",
+    "dataset": "ds1"
+  },
+  "plugins": [
+    "@sanity/base",
+    "@sanity/default-layout",
+    "@sanity/default-login",
+    "@sanity/desk-tool",
+    "barcode-input",
+    "media",
+    "seo-pane",
+    "@sanity/code-input",
+    "markdown"
+  ],
+  "env": {
+    "development": {
+      "plugins": [
+        "@sanity/vision"
+      ]
+    }
+  },
+  "parts": [
+    {
+      "name": "part:@sanity/base/schema",
+      "path": "./schemas/schema"
+    },
+    {
+      "implements": "part:@sanity/form-builder/input/image/asset-sources",
+      "path": "./parts/assetSources.js"
+    }
+  ]
+}
